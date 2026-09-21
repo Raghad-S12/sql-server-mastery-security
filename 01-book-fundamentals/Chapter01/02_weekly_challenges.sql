@@ -46,6 +46,10 @@ ALTER TABLE HR.Employees ADD CONSTRAINT DF_Employees_HireDate
 -- 2.2 Test Case: Insert an employee without specifying the HireDate column
 -- Verify that the current date was populated automatically.
 -- Write your test INSERT and SELECT statements here:
+INSERT INTO HR.Employees (FirstName, LastName, BirthDate, Salary, deptID)
+VALUES 
+    ('Raghad','alotaybi','1990-07-01',12000,5)
+SELECT * FROM HR.Employees
 
 
 
