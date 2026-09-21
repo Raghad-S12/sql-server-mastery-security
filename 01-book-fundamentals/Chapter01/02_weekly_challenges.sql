@@ -54,6 +54,31 @@ SELECT * FROM HR.Employees
 
 
 GO
+ -- =================================================================
+-- Supplementary Practice: Default Employee Status (DEFAULT Constraint)
+-- Scenario: When a new employee is onboarded, their active status 
+--           should automatically default to active (1 / TRUE).
+-- =================================================================
+
+-- Step 1: Add a new column 'IsActive' of type BIT to HR.Employees
+-- Write your ALTER TABLE ADD column statement here:
+
+
+
+-- Step 2: Add a DEFAULT constraint named 'DF_Employees_IsActive' 
+--         setting the default value to 1 for column 'IsActive'
+-- Write your ALTER TABLE ADD CONSTRAINT statement here:
+
+
+
+-- Step 3: Test Case:
+-- Insert a new employee record omitting the 'IsActive' column.
+-- Verify that 'IsActive' automatically populated with 1.
+-- Write your test INSERT and SELECT statements here:
+
+
+
+GO
 
 -- =================================================================
 -- Challenge 3: Email Format Validation (CHECK Constraint)
