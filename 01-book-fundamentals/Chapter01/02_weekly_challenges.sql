@@ -39,7 +39,8 @@ GO
 
 -- 2.1 Add the DEFAULT constraint to HireDate
 -- Write your ALTER TABLE statement here (Hint: use SYSDATETIME() or GETDATE()):
-
+ALTER TABLE HR.Employees ADD CONSTRAINT DF_Employees_HireDate 
+ DEFAULT CAST(GETDATE()AS DATE) FOR HireDate
 
 
 -- 2.2 Test Case: Insert an employee without specifying the HireDate column
