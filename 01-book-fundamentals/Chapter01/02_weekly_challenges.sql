@@ -16,14 +16,18 @@ GO
 
 -- 1.1 Add the UNIQUE constraint on DeptName
 -- Write your ALTER TABLE statement here:
+ALTER TABLE HR.Departments ADD CONSTRAINT UQ_Departments_DeptName UNIQUE(DeptName)
 
-
-
+INSERT INTO HR.Departments(deptID, DeptName) 
+    VALUES(5,'HR')
+SELECT * FROM HR.Departments
+/* Here error will ocuur because we add unique constraint on deptName */
 -- 1.2 Test Case: Try inserting a duplicate department name
 -- Expected Error: Msg 2627 (Violation of UNIQUE KEY constraint)
 -- Write your test INSERT statement here:
 
-
+INSERT INTO HR.Departments(deptID, DeptName) 
+    VALUES(7,'HR')
 
 GO
 
