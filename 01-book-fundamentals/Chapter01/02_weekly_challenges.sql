@@ -62,7 +62,7 @@ GO
 
 -- Step 1: Add a new column 'IsActive' of type BIT to HR.Employees
 -- Write your ALTER TABLE ADD column statement here:
-
+ALTER TABLE HR.Employees ADD IsActive BIT 
 
 
 -- Step 2: Add a DEFAULT constraint named 'DF_Employees_IsActive' 
