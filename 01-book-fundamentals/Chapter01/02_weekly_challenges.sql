@@ -82,6 +82,12 @@ UPDATE HR.Employees
 SET IsActive = 1
 WHERE IsActive IS NULL;
 
+INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive)
+VALUES ('Rama','Almalki','1999-07-09',12000,5,0)
+
+INSERT INTO HR.Employees (FirstName, LastName, BirthDate, Salary, deptID)
+VALUES ('Tariq', 'Alharbi', '2000-03-15', 9500, 5);
+
 
 
 GO
