@@ -68,7 +68,8 @@ ALTER TABLE HR.Employees ADD IsActive BIT
 -- Step 2: Add a DEFAULT constraint named 'DF_Employees_IsActive' 
 --         setting the default value to 1 for column 'IsActive'
 -- Write your ALTER TABLE ADD CONSTRAINT statement here:
-
+ALTER TABLE HR.Employees ADD CONSTRAINT DF_Employees_IsActive 
+    DEFAULT(1) FOR IsActive
 
 
 -- Step 3: Test Case:
