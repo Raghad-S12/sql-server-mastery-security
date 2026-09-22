@@ -77,6 +77,11 @@ ALTER TABLE HR.Employees ADD CONSTRAINT DF_Employees_IsActive
 -- Verify that 'IsActive' automatically populated with 1.
 -- Write your test INSERT and SELECT statements here:
 
+--To update existing records with the new default value
+UPDATE HR.Employees
+SET IsActive = 1
+WHERE IsActive IS NULL;
+
 
 
 GO
