@@ -99,7 +99,7 @@ GO
 
 -- 3.1 Add the Email column to HR.Employees (VARCHAR(100), NULL)
 -- Write your ALTER TABLE ADD COLUMN statement here:
-
+ALTER TABLE HR.Employees ADD Email (VARCHAR(100), NULL)
 
 
 -- 3.2 Add a CHECK constraint ensuring Email contains '@' and '.'
