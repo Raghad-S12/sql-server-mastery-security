@@ -122,7 +122,10 @@ INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive
 INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive,Email)
     VALUES('Asma','Alharbi','2000-01-07',19000,1,1,'AsmaAlharbi@gmailcom')
 --Case C 
-
+    
+-- Reason: Under SQL 3-Valued Logic (3VL), evaluating NULL returns UNKNOWN.
+-- A CHECK constraint rejects data ONLY if the expression evaluates to FALSE; 
+-- therefore, both TRUE and UNKNOWN are accepted.
 INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive,Email)
     VALUES('Lana','Alharbi','2002-11-02',10000,1,1,NULL)
 
