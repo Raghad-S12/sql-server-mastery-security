@@ -104,7 +104,8 @@ ALTER TABLE HR.Employees ADD Email VARCHAR(100) NULL
 
 -- 3.2 Add a CHECK constraint ensuring Email contains '@' and '.'
 -- Write your ALTER TABLE ADD CONSTRAINT statement here:
-
+ALTER TABLE HR.Employees ADD CONSTRAINT CK_EMAIL_EMPLOYEES
+    CHECK(Email LIKE '%@%' AND Email LIKE'%.%');
 
 
 -- 3.3 Test Cases:
