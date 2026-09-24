@@ -113,6 +113,8 @@ ALTER TABLE HR.Employees ADD CONSTRAINT CK_EMAIL_EMPLOYEES
 -- Case B: Invalid Email without '@' (Should fail with Msg 547)
 -- Case C: NULL Email (Should succeed due to 3VL UNKNOWN logic)
 
+INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive,Email)
+    VALUES('Saad','Almalki','1989-12-12',12000,1,0,'SaadAlmalki@gmail.com')
 
 
 GO
