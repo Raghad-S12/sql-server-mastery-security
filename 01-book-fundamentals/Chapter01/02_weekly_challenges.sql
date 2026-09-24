@@ -115,7 +115,9 @@ ALTER TABLE HR.Employees ADD CONSTRAINT CK_EMAIL_EMPLOYEES
 
 INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive,Email)
     VALUES('Saad','Almalki','1989-12-12',12000,1,0,'SaadAlmalki@gmail.com')
-
+--Error will happen here
+INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive,Email)
+    VALUES('Sara','Alharbi','2001-01-22',9000,1,1,'SaraAlharbigmail.com')
 
 GO
 
