@@ -118,6 +118,11 @@ INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive
 --Error will happen here
 INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive,Email)
     VALUES('Sara','Alharbi','2001-01-22',9000,1,1,'SaraAlharbigmail.com')
+--Error 2 will happen here
+INSERT INTO HR.Employees(FirstName, LastName, BirthDate, Salary, deptID,IsActive,Email)
+    VALUES('Asma','Alharbi','2000-01-07',19000,1,1,'AsmaAlharbi@gmailcom')
+
+
 
 GO
 
