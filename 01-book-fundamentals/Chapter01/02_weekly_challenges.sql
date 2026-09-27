@@ -140,12 +140,30 @@ GO
 
 -- 4.1 Attempt to delete Department 1 which already has assigned employees:
 -- DELETE FROM HR.Departments WHERE deptID = 1;
+    DELETE FROM HR.Departments WHERE deptID=1;
 
 -- 4.2 Reflection Questions:
 -- Q1: What error message and number were returned by the engine?
+Msg 547, Level 16, State 0, Line 113
+The DELETE statement conflicted with the REFERENCE constraint "FK_Employees_Departments_DeptID".
+    The conflict occurred in database "Chapter01_Lab", table "HR.Employees", column 'deptID'.
 -- Q2: What steps must be executed to delete Department 1 safely 
 --     without corrupting or violating referential integrity?
 -- Write your answers as comments below:
+
+-- 4.2 
+-- Conflict: Deleting Department 1 violates FK_Employees_Departments_DeptID (Msg 547).
+-- Tested Scenarios:
+-- 1. SET deptID = NULL: Failed (deptID is defined as NOT NULL).
+-- 2. SET deptID = 7: Failed (FK violation; department 7 does not exist).
+-- 
+-- Executed Resolution:
+-- Step 1: Created a valid destination department:
+        INSERT INTO HR.Departments (deptID, DeptName) VALUES (10, 'Temporary department');
+-- Step 2: Reassigned referencing child records in HR.Employees:
+        UPDATE HR.Employees SET deptID = 10 WHERE deptID = 1;
+-- Step 3: Successfully deleted the unreferenced parent record:
+        DELETE FROM HR.Departments WHERE deptID = 1;
 
 
 
