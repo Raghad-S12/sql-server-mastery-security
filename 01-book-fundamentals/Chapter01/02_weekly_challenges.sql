@@ -144,9 +144,9 @@ GO
 
 -- 4.2 Reflection Questions:
 -- Q1: What error message and number were returned by the engine?
-Msg 547, Level 16, State 0, Line 113
+/*Msg 547, Level 16, State 0, Line 113
 The DELETE statement conflicted with the REFERENCE constraint "FK_Employees_Departments_DeptID".
-    The conflict occurred in database "Chapter01_Lab", table "HR.Employees", column 'deptID'.
+    The conflict occurred in database "Chapter01_Lab", table "HR.Employees", column 'deptID'.*/
 -- Q2: What steps must be executed to delete Department 1 safely 
 --     without corrupting or violating referential integrity?
 -- Write your answers as comments below:
