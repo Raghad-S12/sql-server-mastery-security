@@ -27,3 +27,4 @@ Technical Insight:
 - Simple predicate pushdown: Filters rows at the storage level using WHERE clause.
 - Both predicates must evaluate strictly to TRUE using the logical operator AND.
 */
+SELECT product_id FROM Products WHERE low_fats='Y' AND recyclable ='Y'
